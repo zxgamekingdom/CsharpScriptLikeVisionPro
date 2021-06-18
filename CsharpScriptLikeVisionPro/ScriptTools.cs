@@ -14,7 +14,14 @@ namespace CsharpScriptLikeVisionPro
     public class ScriptTools
     {
         public static string BaseCode =>
-            @"class InvokeBaseImpl : InvokeBase
+            @"using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using CsharpScriptLikeVisionPro;
+
+class InvokeBaseImpl : InvokeBase
 {
     private Dictionary<string, object> _inputs;
 
@@ -31,7 +38,8 @@ namespace CsharpScriptLikeVisionPro
         // #endif
         throw new NotImplementedException();
     }
-}";
+}
+";
 
         public static Assembly CreateAssembly(string code,
             IEnumerable<MetadataReference> references)

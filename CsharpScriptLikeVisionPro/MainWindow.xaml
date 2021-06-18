@@ -22,6 +22,16 @@
         <TextBox
             Text="{Binding Code}"
             TextWrapping="Wrap" />
-
+        <WrapPanel Grid.Column="1">
+            <Button
+                Command="{Binding CommandRecovery}"
+                Content="恢复" />
+            <Button
+                Command="{Binding CommandCompile}"
+                Content="编译" />
+            <Button
+                Command="{Binding CommandRun}"
+                Content="运行" />
+        </WrapPanel>
     </Grid>
 </Window>
